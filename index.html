@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Story World</title>
+<meta name="description" content="Story World — Read inspiring moral stories with word-meaning lookup, voice reading, dark mode and more. Written and curated by Sneha.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Hidden Radio Buttons -->
+<input type="radio" name="story" id="story1" checked>
+<input type="radio" name="story" id="story2">
+<input type="radio" name="story" id="story3">
+<input type="radio" name="story" id="story4">
+<input type="radio" name="story" id="story5">
+<input type="radio" name="story" id="story6">
+<input type="radio" name="story" id="story7">
+<input type="radio" name="story" id="story8">
+<input type="radio" name="story" id="story9">
+<input type="radio" name="story" id="story10">
+<input type="radio" name="story" id="story11">
+<input type="radio" name="story" id="story12">
+<input type="radio" name="story" id="story13">
+<input type="radio" name="story" id="story14">
+<input type="radio" name="story" id="story15">
+<input type="radio" name="story" id="story16">
+<input type="radio" name="story" id="story17">
+
+<!-- Dark Mode Toggle -->
+<input type="checkbox" id="darkMode">
+
+<!-- Font Size Controls -->
+<input type="radio" name="fontSize" id="fontSmall">
+<input type="radio" name="fontSize" id="fontMedium" checked>
+<input type="radio" name="fontSize" id="fontLarge">
+
+<!-- Category Filter -->
+<input type="radio" name="category" id="catAll" checked>
+<input type="radio" name="category" id="catCourage">
+<input type="radio" name="category" id="catHonesty">
+<input type="radio" name="category" id="catKindness">
+<input type="radio" name="category" id="catCleverness">
+<input type="radio" name="category" id="catGreed">
+<input type="radio" name="category" id="catWisdom">
+<input type="radio" name="category" id="catLoyalty">
+<input type="radio" name="category" id="catHardwork">
+<input type="radio" name="category" id="catUnity">
+<input type="radio" name="category" id="catSelfreflection">
+<input type="radio" name="category" id="catPerseverance">
+
+<!-- Favorites view toggle -->
+<input type="checkbox" id="showFavOnly">
+
+<!-- Header -->
+<header class="header">
+  <div class="bookIcon">📖</div>
+  <h1>Story World</h1>
+  <p>Explore Inspiring Stories, Learn Valuable Lessons & Enjoy Reading.</p>
+
+  <div class="controls-bar">
+    <label for="darkMode" class="toggle-switch">🌙 Dark Mode</label>
+    <label for="showFavOnly" class="toggle-switch">⭐ My Favorites</label>
+    <div class="font-size-controls">
+      <span class="font-label">Font:</span>
+      <label for="fontSmall" class="font-btn">A-</label>
+      <label for="fontMedium" class="font-btn">A</label>
+      <label for="fontLarge" class="font-btn">A+</label>
+    </div>
+  </div>
+</header>
+
+<!-- Page Dots Pagination -->
+<div class="page-dots">
+  <label for="story1" class="dot" title="Story 1"></label>
+  <label for="story2" class="dot" title="Story 2"></label>
+  <label for="story3" class="dot" title="Story 3"></label>
+  <label for="story4" class="dot" title="Story 4"></label>
+  <label for="story5" class="dot" title="Story 5"></label>
+  <label for="story6" class="dot" title="Story 6"></label>
+  <label for="story7" class="dot" title="Story 7"></label>
+  <label for="story8" class="dot" title="Story 8"></label>
+  <label for="story9" class="dot" title="Story 9"></label>
+  <label for="story10" class="dot" title="Story 10"></label>
+  <label for="story11" class="dot" title="Story 11"></label>
+  <label for="story12" class="dot" title="Story 12"></label>
+  <label for="story13" class="dot" title="Story 13"></label>
+  <label for="story14" class="dot" title="Story 14"></label>
+  <label for="story15" class="dot" title="Story 15"></label>
+  <label for="story16" class="dot" title="Story 16"></label>
+  <label for="story17" class="dot" title="Story 17"></label>
+</div>
+
+<div class="container">
+
+  <!-- Left Sidebar -->
+  <div class="left">
+    <h2>Stories</h2>
+
+    <div class="category-tabs">
+      <label for="catAll" class="cat-tab">All</label>
+      <label for="catCourage" class="cat-tab">Courage</label>
+      <label for="catHonesty" class="cat-tab">Honesty</label>
+      <label for="catKindness" class="cat-tab">Kindness</label>
+      <label for="catCleverness" class="cat-tab">Cleverness</label>
+      <label for="catGreed" class="cat-tab">Greed</label>
+      <label for="catWisdom" class="cat-tab">Wisdom</label>
+      <label for="catLoyalty" class="cat-tab">Loyalty</label>
+      <label for="catHardwork" class="cat-tab">Hard Work</label>
+      <label for="catUnity" class="cat-tab">Unity</label>
+      <label for="catSelfreflection" class="cat-tab">Self-Reflection</label>
+      <label for="catPerseverance" class="cat-tab">Perseverance</label>
+    </div>
+
+    <div class="story-row">
+      <input type="checkbox" id="fav1" class="fav-toggle">
+      <label for="fav1" class="star"></label>
+      <label for="story1" class="menu cat-courage">🐦 The Brave Little Bird</label>
+      <span class="preview-card">🐦 A tiny bird's courage helps rebuild the forest after a storm.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav2" class="fav-toggle">
+      <label for="fav2" class="star"></label>
+      <label for="story2" class="menu cat-honesty">🪓 The Honest Woodcutter</label>
+      <span class="preview-card">🪓 A poor woodcutter's honesty is rewarded by a river fairy.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav3" class="fav-toggle">
+      <label for="fav3" class="star"></label>
+      <label for="story3" class="menu cat-kindness">🦁 The Lion and Mouse</label>
+      <span class="preview-card">🦁 A tiny mouse repays a lion's mercy by saving his life.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav4" class="fav-toggle">
+      <label for="fav4" class="star"></label>
+      <label for="story4" class="menu cat-cleverness">🐰 The Clever Rabbit</label>
+      <span class="preview-card">🐰 A clever rabbit outsmarts a cruel lion to free the forest.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav5" class="fav-toggle">
+      <label for="fav5" class="star"></label>
+      <label for="story5" class="menu cat-greed">🦊 The Greedy Fox</label>
+      <span class="preview-card">🦊 A greedy fox learns a hard lesson about moderation.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav6" class="fav-toggle">
+      <label for="fav6" class="star"></label>
+      <label for="story6" class="menu cat-wisdom">🦉 The Wise Owl</label>
+      <span class="preview-card">🦉 A patient owl teaches the forest to listen before speaking.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav7" class="fav-toggle">
+      <label for="fav7" class="star"></label>
+      <label for="story7" class="menu cat-loyalty">🐶 The Loyal Dog</label>
+      <span class="preview-card">🐶 A faithful dog guards the farm and scares off thieves.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav8" class="fav-toggle">
+      <label for="fav8" class="star"></label>
+      <label for="story8" class="menu cat-kindness">🐘 The Kind Elephant</label>
+      <span class="preview-card">🐘 A gentle elephant is rescued by the friends he once helped.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav9" class="fav-toggle">
+      <label for="fav9" class="star"></label>
+      <label for="story9" class="menu cat-hardwork">🐜 The Tiny Ant</label>
+      <span class="preview-card">🐜 A hardworking ant prepares while others waste their time.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav10" class="fav-toggle">
+      <label for="fav10" class="star"></label>
+      <label for="story10" class="menu cat-courage">🦌 The Brave Deer</label>
+      <span class="preview-card">🦌 A brave deer leads the animals to safety during a wildfire.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav11" class="fav-toggle">
+      <label for="fav11" class="star"></label>
+      <label for="story11" class="menu cat-cleverness">🐦 The Thirsty Crow</label>
+      <span class="preview-card">🐦 A clever crow uses stones to raise water in a pot.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav12" class="fav-toggle">
+      <label for="fav12" class="star"></label>
+      <label for="story12" class="menu cat-greed">🥚 The Golden Goose</label>
+      <span class="preview-card">🥚 A greedy farmer loses everything by wanting it all at once.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav13" class="fav-toggle">
+      <label for="fav13" class="star"></label>
+      <label for="story13" class="menu cat-unity">🪵 The Bundle of Sticks</label>
+      <span class="preview-card">🪵 Four fighting sons learn that unity makes them unbreakable.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav14" class="fav-toggle">
+      <label for="fav14" class="star"></label>
+      <label for="story14" class="menu cat-selfreflection">🍇 The Fox and the Grapes</label>
+      <span class="preview-card">🍇 A fox calls grapes sour after failing to reach them.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav15" class="fav-toggle">
+      <label for="fav15" class="star"></label>
+      <label for="story15" class="menu cat-hardwork">🥛 The Milkmaid and Her Pot</label>
+      <span class="preview-card">🥛 A daydreaming milkmaid loses her milk and her big dreams.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav16" class="fav-toggle">
+      <label for="fav16" class="star"></label>
+      <label for="story16" class="menu cat-honesty">🐺 The Boy Who Cried Wolf</label>
+      <span class="preview-card">🐺 A boy's lies about a wolf cost him everyone's trust.</span>
+    </div>
+    <div class="story-row">
+      <input type="checkbox" id="fav17" class="fav-toggle">
+      <label for="fav17" class="star"></label>
+      <label for="story17" class="menu cat-perseverance">🐢 The Hare and the Tortoise</label>
+      <span class="preview-card">🐢 A slow but steady tortoise beats an overconfident hare.</span>
+    </div>
+  </div>
+
+  <!-- Center -->
+  <div class="center">
+
+    <!-- Story 1 -->
+    <div class="page page1">
+      <h1>The Brave Little Bird</h1>
+      <img src="images/bird.png" alt="Bird">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText1')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText1">
+        Once upon a time, there lived a
+        <span class="glossary"><input type="checkbox" id="g1_1" class="glossary-toggle"><label for="g1_1" class="glossary-word">tiny</label><span class="glossary-meaning">बहुत छोटा / नन्हा सा</span></span>
+        bird in a peaceful forest. Every morning, she sang
+        beautiful songs that filled the forest with happiness and joy. All the animals loved listening
+        to her sweet voice because it brought peace and comfort to everyone. One day, a
+        <span class="glossary"><input type="checkbox" id="g1_2" class="glossary-toggle"><label for="g1_2" class="glossary-word">terrible</label><span class="glossary-meaning">भयानक / डरावना</span></span>
+        storm hit the forest with strong winds and heavy rain. Many trees fell, nests were destroyed, and the
+        animals became
+        <span class="glossary"><input type="checkbox" id="g1_3" class="glossary-toggle"><label for="g1_3" class="glossary-word">frightened</label><span class="glossary-meaning">डरा हुआ</span></span>
+        . Although the little bird also lost her own nest, she remained brave
+        and encouraged everyone to stay calm and help one another. The squirrels gathered food, the
+        rabbits found safe places for the younger animals, and the birds worked together to
+        <span class="glossary"><input type="checkbox" id="g1_4" class="glossary-toggle"><label for="g1_4" class="glossary-word">rebuild</label><span class="glossary-meaning">दोबारा बनाना</span></span>
+        the damaged nests. After the storm passed, the forest slowly returned to normal. The animals
+        thanked the little bird for her
+        <span class="glossary"><input type="checkbox" id="g1_5" class="glossary-toggle"><label for="g1_5" class="glossary-word">courage</label><span class="glossary-meaning">साहस / हिम्मत</span></span>
+        , kindness, and positive attitude, realizing that even
+        the smallest creature can make a big difference. From that day on, the little bird became a
+        symbol of hope and unity, inspiring everyone to face every challenge with confidence and a
+        helping heart.
+      </p>
+      <h3>Moral</h3>
+      <p>Never lose hope in difficult situations.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label class="btn disable">⬅ Previous</label>
+        <span class="pageNo">📖 Page 1 / 17</span>
+        <label for="story2" class="btn"> Next ➜</label>
+      </div>
+    </div>
+
+    <!-- Story 2 -->
+    <div class="page page2">
+      <h1>The Honest Woodcutter</h1>
+      <img src="images/woodcutter.jpg" alt="Woodcutter">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText2')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText2">
+        Once upon a time, there was a poor but
+        <span class="glossary"><input type="checkbox" id="g2_1" class="glossary-toggle"><label for="g2_1" class="glossary-word">hardworking</label><span class="glossary-meaning">मेहनती</span></span>
+        woodcutter who earned his living by cutting
+        trees in the forest. One day, while chopping wood near a river, his axe
+        <span class="glossary"><input type="checkbox" id="g2_2" class="glossary-toggle"><label for="g2_2" class="glossary-word">accidentally</label><span class="glossary-meaning">अचानक / गलती से</span></span>
+        slipped from his hands and fell into the deep water. The woodcutter became very sad because it was his
+        only tool for earning money. Suddenly, a kind fairy appeared from the river holding a beautiful
+        golden axe and asked if it belonged to him. The
+        <span class="glossary"><input type="checkbox" id="g2_3" class="glossary-toggle"><label for="g2_3" class="glossary-word">honest</label><span class="glossary-meaning">ईमानदार</span></span>
+        woodcutter replied that the golden axe
+        was not his. The fairy then returned with a shiny silver axe, but once again he truthfully said
+        it was not his. Finally, she brought out his old iron axe, and the woodcutter happily
+        recognized it as his own.
+        <span class="glossary"><input type="checkbox" id="g2_4" class="glossary-toggle"><label for="g2_4" class="glossary-word">Impressed</label><span class="glossary-meaning">प्रभावित</span></span>
+        by his honesty, the fairy rewarded him with all three
+        axes—the golden, silver, and iron ones. The woodcutter thanked the fairy with a
+        <span class="glossary"><input type="checkbox" id="g2_5" class="glossary-toggle"><label for="g2_5" class="glossary-word">grateful</label><span class="glossary-meaning">आभारी / कृतज्ञ</span></span>
+        heart and returned home happily, proving that honesty always brings great rewards.
+      </p>
+      <h3>Moral</h3>
+      <p>Honesty is the best policy.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story1" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 2 / 17</span>
+        <label for="story3" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 3 ================= -->
+    <div class="page page3">
+      <h1>The Lion and the Mouse</h1>
+      <img src="images/LionAndMouse.jpg" alt="Lion">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText3')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText3">
+        One day, a
+        <span class="glossary"><input type="checkbox" id="g3_1" class="glossary-toggle"><label for="g3_1" class="glossary-word">mighty</label><span class="glossary-meaning">शक्तिशाली / ताकतवर</span></span>
+        lion was sleeping peacefully under a large tree in the forest. A tiny mouse
+        accidentally ran across the lion's body and woke him up. Angry at being
+        <span class="glossary"><input type="checkbox" id="g3_2" class="glossary-toggle"><label for="g3_2" class="glossary-word">disturbed</label><span class="glossary-meaning">परेशान किया गया</span></span>
+        , the lion caught the little mouse in his huge paw. The frightened mouse begged for
+        <span class="glossary"><input type="checkbox" id="g3_3" class="glossary-toggle"><label for="g3_3" class="glossary-word">mercy</label><span class="glossary-meaning">दया / क्षमा</span></span>
+        and promised that one day he would return the favor. The lion laughed at the idea that such a small creature
+        could ever help him, but he felt
+        <span class="glossary"><input type="checkbox" id="g3_4" class="glossary-toggle"><label for="g3_4" class="glossary-word">pity</label><span class="glossary-meaning">तरस / दया</span></span>
+        and decided to let the mouse go. A few days later, the
+        lion was trapped in a hunter's strong net and roared loudly for help. Hearing the lion's cries,
+        the little mouse rushed to the spot and quickly began chewing the ropes with its sharp teeth.
+        Within a short time, the net was broken, and the lion was free. The lion
+        <span class="glossary"><input type="checkbox" id="g3_5" class="glossary-toggle"><label for="g3_5" class="glossary-word">realized</label><span class="glossary-meaning">एहसास हुआ</span></span>
+        that even the smallest friend can be of great help and thanked the mouse for saving his life. From that day
+        onward, they became the best of friends and lived happily in the forest.
+      </p>
+      <h3>Moral</h3>
+      <p>Kindness is never wasted.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story2" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 3 / 17</span>
+        <label for="story4" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 4 ================= -->
+    <div class="page page4">
+      <h1>The Clever Rabbit</h1>
+      <img src="images/rabbit.png" alt="Rabbit">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText4')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText4">
+        Once upon a time, a
+        <span class="glossary"><input type="checkbox" id="g4_1" class="glossary-toggle"><label for="g4_1" class="glossary-word">cruel</label><span class="glossary-meaning">क्रूर / निर्दयी</span></span>
+        lion lived in a dense forest and frightened all the animals with his
+        strength. Every day, he hunted
+        <span class="glossary"><input type="checkbox" id="g4_2" class="glossary-toggle"><label for="g4_2" class="glossary-word">innocent</label><span class="glossary-meaning">निर्दोष / मासूम</span></span>
+        animals, making everyone live in constant fear. The
+        animals finally decided to send one animal to the lion each day to avoid unnecessary killing.
+        One day, it was a clever rabbit's turn. Instead of giving up, the rabbit made a smart plan to
+        save everyone. He reached the lion very late and told him that another lion had stopped him on
+        the way and claimed to be the real king of the forest.
+        <span class="glossary"><input type="checkbox" id="g4_3" class="glossary-toggle"><label for="g4_3" class="glossary-word">Furious</label><span class="glossary-meaning">बहुत गुस्से में</span></span>
+        , the lion demanded to see his rival. The rabbit led him to a deep well and pointed inside. The lion looked into the water and
+        saw his own
+        <span class="glossary"><input type="checkbox" id="g4_4" class="glossary-toggle"><label for="g4_4" class="glossary-word">reflection</label><span class="glossary-meaning">प्रतिबिंब / परछाई</span></span>
+        . Thinking it was another lion, he roared loudly. When the reflection
+        roared back, the angry lion jumped into the well to attack it. He fell into the deep water and
+        could not escape. The forest animals celebrated their freedom and praised the clever rabbit for
+        his
+        <span class="glossary"><input type="checkbox" id="g4_5" class="glossary-toggle"><label for="g4_5" class="glossary-word">intelligence</label><span class="glossary-meaning">बुद्धिमानी / समझदारी</span></span>
+        and bravery.
+      </p>
+      <h3>Moral</h3>
+      <p>Intelligence is more powerful than strength.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story3" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 4 / 17</span>
+        <label for="story5" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 5 ================= -->
+    <div class="page page5">
+      <h1>The Greedy Fox</h1>
+      <img src="images/fox.png" alt="Fox">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText5')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText5">
+        Once upon a time, a hungry fox
+        <span class="glossary"><input type="checkbox" id="g5_1" class="glossary-toggle"><label for="g5_1" class="glossary-word">wandered</label><span class="glossary-meaning">भटकते हुए घूमा</span></span>
+        into a farmer's house in search of food. While looking
+        around, he discovered a basket full of delicious fruits and freshly baked bread. Excited by the
+        sight, the fox began eating without thinking about the future. He ate so much that his stomach
+        became full, and his body grew too fat. When he tried to leave through the same small hole he
+        had entered, he got
+        <span class="glossary"><input type="checkbox" id="g5_2" class="glossary-toggle"><label for="g5_2" class="glossary-word">stuck</label><span class="glossary-meaning">फंस गया</span></span>
+        and could not move. He struggled for a long time, but it was
+        <span class="glossary"><input type="checkbox" id="g5_3" class="glossary-toggle"><label for="g5_3" class="glossary-word">impossible</label><span class="glossary-meaning">नामुमकिन</span></span>
+        to escape. A wise rabbit passing by saw the fox and advised him to stay hungry for a
+        few days until he became thin again. The fox followed the advice and
+        <span class="glossary"><input type="checkbox" id="g5_4" class="glossary-toggle"><label for="g5_4" class="glossary-word">patiently</label><span class="glossary-meaning">धैर्य के साथ</span></span>
+        waited. After two days without food, his body became slim enough to fit through the hole, and he finally
+        escaped safely. From that day on, the fox realized that greed often leads to trouble and
+        learned the importance of self-control and
+        <span class="glossary"><input type="checkbox" id="g5_5" class="glossary-toggle"><label for="g5_5" class="glossary-word">moderation</label><span class="glossary-meaning">संयम / सीमित मात्रा में रहना</span></span>
+        .
+      </p>
+      <h3>Moral</h3>
+      <p>Greed always leads to problems.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story4" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 5 / 17</span>
+        <label for="story6" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 6 ================= -->
+    <div class="page page6">
+      <h1>The Wise Owl</h1>
+      <img src="images/owl.png" alt="Owl">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText6')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText6">
+        Once upon a time, an old and
+        <span class="glossary"><input type="checkbox" id="g6_1" class="glossary-toggle"><label for="g6_1" class="glossary-word">wise</label><span class="glossary-meaning">बुद्धिमान / समझदार</span></span>
+        owl lived in a huge tree at the edge of a peaceful forest.
+        Unlike other animals, the owl spoke very little but listened carefully to everyone around him.
+        Whenever the animals had a problem or
+        <span class="glossary"><input type="checkbox" id="g6_2" class="glossary-toggle"><label for="g6_2" class="glossary-word">disagreement</label><span class="glossary-meaning">असहमति / मतभेद</span></span>
+        , they visited the owl for advice. He always
+        listened patiently, thought carefully before speaking, and gave fair and thoughtful solutions.
+        Because of his wisdom and calm nature, every animal in the forest
+        <span class="glossary"><input type="checkbox" id="g6_3" class="glossary-toggle"><label for="g6_3" class="glossary-word">respected</label><span class="glossary-meaning">सम्मान करते थे</span></span>
+        and trusted him.
+        One day, two friends argued over a piece of food and asked the owl to settle the matter. The
+        owl encouraged them to share the food equally and reminded them that friendship was far more
+        <span class="glossary"><input type="checkbox" id="g6_4" class="glossary-toggle"><label for="g6_4" class="glossary-word">valuable</label><span class="glossary-meaning">कीमती / मूल्यवान</span></span>
+        than any possession. The friends realized their mistake, apologized to each other, and
+        happily shared the food. From that day on, the owl became a symbol of wisdom, patience, and
+        understanding, inspiring every animal to think before speaking and to solve problems
+        <span class="glossary"><input type="checkbox" id="g6_5" class="glossary-toggle"><label for="g6_5" class="glossary-word">peacefully</label><span class="glossary-meaning">शांति से</span></span>
+        .
+      </p>
+      <h3>Moral</h3>
+      <p>Listen more and speak less.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story5" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 6 / 17</span>
+        <label for="story7" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 7 ================= -->
+    <div class="page page7">
+      <h1>The Loyal Dog</h1>
+      <img src="images/dog.png" alt="Loyal Dog">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText7')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText7">
+        Once upon a time, a farmer had a
+        <span class="glossary"><input type="checkbox" id="g7_1" class="glossary-toggle"><label for="g7_1" class="glossary-word">loyal</label><span class="glossary-meaning">वफादार</span></span>
+        and faithful dog who guarded his house every night. The
+        dog was always
+        <span class="glossary"><input type="checkbox" id="g7_2" class="glossary-toggle"><label for="g7_2" class="glossary-word">alert</label><span class="glossary-meaning">सतर्क / चौकन्ना</span></span>
+        and protected the farmer's family from danger. One dark and stormy night,
+        a group of thieves quietly entered the farm, hoping to steal valuable belongings. As soon as
+        the dog heard strange footsteps, he began barking loudly and bravely chased the thieves around
+        the farm. His continuous barking woke the farmer and his family, who quickly came outside with
+        lanterns.
+        <span class="glossary"><input type="checkbox" id="g7_3" class="glossary-toggle"><label for="g7_3" class="glossary-word">Frightened</label><span class="glossary-meaning">डरा हुआ</span></span>
+        by the noise and the farmer's arrival, the thieves ran away without
+        stealing anything. The farmer realized that his faithful dog had saved not only his home but
+        also his family's safety. He lovingly thanked the dog, gave him delicious food, and praised his
+        courage and loyalty. From that day onward, everyone in the village
+        <span class="glossary"><input type="checkbox" id="g7_4" class="glossary-toggle"><label for="g7_4" class="glossary-word">admired</label><span class="glossary-meaning">प्रशंसा की</span></span>
+        the brave dog and
+        learned that true loyalty and
+        <span class="glossary"><input type="checkbox" id="g7_5" class="glossary-toggle"><label for="g7_5" class="glossary-word">devotion</label><span class="glossary-meaning">समर्पण / निष्ठा</span></span>
+        are priceless qualities that should always be respected
+        and rewarded.
+      </p>
+      <h3>Moral</h3>
+      <p>Loyalty is a true treasure.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story6" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 7 / 17</span>
+        <label for="story8" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 8 ================= -->
+    <div class="page page8">
+      <h1>The Kind Elephant</h1>
+      <img src="images/elephant.png" alt="Kind Elephant">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText8')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText8">
+        Once upon a time, a kind and
+        <span class="glossary"><input type="checkbox" id="g8_1" class="glossary-toggle"><label for="g8_1" class="glossary-word">gentle</label><span class="glossary-meaning">कोमल / नरम स्वभाव का</span></span>
+        elephant lived in a beautiful forest near a wide river.
+        Every day, he happily helped smaller animals like rabbits, squirrels, and deer cross the river
+        safely on his strong back. The animals loved and respected him because he was always ready to
+        help anyone in need without expecting anything in return. One day, while walking through the
+        forest, the elephant accidentally fell into a deep
+        <span class="glossary"><input type="checkbox" id="g8_2" class="glossary-toggle"><label for="g8_2" class="glossary-word">pit</label><span class="glossary-meaning">गड्ढा</span></span>
+        dug by hunters. He tried his best to
+        climb out, but the walls were too
+        <span class="glossary"><input type="checkbox" id="g8_3" class="glossary-toggle"><label for="g8_3" class="glossary-word">steep</label><span class="glossary-meaning">खड़ी / तीखी ढलान वाली</span></span>
+        and slippery. Hearing his cries for help, all the
+        animals gathered together. The rabbits brought ropes made of strong vines, the monkeys tied
+        them to nearby trees, and the deer and bears pulled with all their strength. After working
+        together, they finally
+        <span class="glossary"><input type="checkbox" id="g8_4" class="glossary-toggle"><label for="g8_4" class="glossary-word">rescued</label><span class="glossary-meaning">बचाया</span></span>
+        the elephant. The elephant thanked his friends with tears of joy
+        and realized that the kindness he had shown to others had come back to him when he needed it
+        the most. From that day onward, the forest became an even happier place where everyone helped
+        one another with love and respect.
+      </p>
+      <h3>Moral</h3>
+      <p>Kindness is always rewarded.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story7" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 8 / 17</span>
+        <label for="story9" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 9 ================= -->
+    <div class="page page9">
+      <h1>The Tiny Ant</h1>
+      <img src="images/ant.png" alt="Tiny Ant">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText9')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText9">
+        Once upon a time, a tiny ant lived in a peaceful garden with many other insects. Every day, the
+        ant worked hard to collect grains of food and stored them safely for the future. While the
+        grasshoppers and some other insects spent their time singing, playing, and enjoying the sunny
+        days, the ant remained busy preparing for the rainy season. They laughed at the ant and called
+        her
+        <span class="glossary"><input type="checkbox" id="g9_1" class="glossary-toggle"><label for="g9_1" class="glossary-word">foolish</label><span class="glossary-meaning">मूर्ख</span></span>
+        for working so hard. Soon, the rainy season arrived with heavy rain and strong
+        winds. The insects who had wasted their time had no food and
+        <span class="glossary"><input type="checkbox" id="g9_2" class="glossary-toggle"><label for="g9_2" class="glossary-word">struggled</label><span class="glossary-meaning">संघर्ष किया</span></span>
+        to survive. However, the
+        hardworking ant had enough food stored in her home and lived comfortably throughout the season.
+        Seeing the ant's success, the other insects realized the importance of planning ahead and
+        working hard. They learned a valuable lesson that
+        <span class="glossary"><input type="checkbox" id="g9_3" class="glossary-toggle"><label for="g9_3" class="glossary-word">dedication</label><span class="glossary-meaning">समर्पण / लगन</span></span>
+        , patience, and
+        <span class="glossary"><input type="checkbox" id="g9_4" class="glossary-toggle"><label for="g9_4" class="glossary-word">preparation</label><span class="glossary-meaning">तैयारी</span></span>
+        always lead to success and security.
+      </p>
+      <h3>Moral</h3>
+      <p>Hard work brings success.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story8" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 9 / 17</span>
+        <label for="story10" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 10 ================= -->
+    <div class="page page10">
+      <h1>The Brave Deer</h1>
+      <img src="images/deer.png" alt="Brave Deer">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText10')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText10">
+        Once upon a time, a young deer lived peacefully in a beautiful forest with many other animals.
+        Although the deer was gentle and kind, it was also known for its bravery and willingness to
+        help others. One day, a
+        <span class="glossary"><input type="checkbox" id="g10_1" class="glossary-toggle"><label for="g10_1" class="glossary-word">fierce</label><span class="glossary-meaning">भयंकर / उग्र</span></span>
+        wildfire suddenly spread through the forest, causing fear and
+        <span class="glossary"><input type="checkbox" id="g10_2" class="glossary-toggle"><label for="g10_2" class="glossary-word">panic</label><span class="glossary-meaning">घबराहट</span></span>
+        among the smaller animals. The young deer was frightened too, but instead of running away
+        alone, it encouraged everyone to stay calm and follow a safe path. The deer guided the rabbits,
+        squirrels, birds, and other small animals through the forest until they reached a safe place
+        near the river. Thanks to the deer's quick thinking and courage, many lives were saved. The
+        animals praised the young deer for its
+        <span class="glossary"><input type="checkbox" id="g10_3" class="glossary-toggle"><label for="g10_3" class="glossary-word">selfless</label><span class="glossary-meaning">निःस्वार्थ</span></span>
+        actions and thanked it for protecting them
+        during the difficult time. From that day onward, the deer became a symbol of bravery,
+        leadership, and kindness, reminding everyone that true courage means helping others even when
+        you are afraid.
+      </p>
+      <h3>Moral</h3>
+      <p>True bravery means helping others even when you are afraid.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story9" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 10 / 17</span>
+        <label for="story11" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 11 ================= -->
+    <div class="page page11">
+      <h1>The Thirsty Crow</h1>
+      <img src="images/crow.png" alt="Thirsty Crow">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText11')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText11">
+        On a hot summer day, a
+        <span class="glossary"><input type="checkbox" id="g11_1" class="glossary-toggle"><label for="g11_1" class="glossary-word">thirsty</label><span class="glossary-meaning">प्यासा</span></span>
+        crow searched everywhere for water but could not find any. After
+        flying for a long time, it finally discovered a clay pot with only a little water at the
+        bottom. The crow tried its best to drink the water, but its beak could not reach it. Instead of
+        giving up, the clever crow picked up small stones one by one and dropped them into the pot.
+        Slowly, the water level began to rise until it reached the top. The crow happily drank the
+        water and flew away feeling refreshed. All the birds admired the crow's intelligence and
+        learned that every problem can be solved with patience, smart thinking, and
+        <span class="glossary"><input type="checkbox" id="g11_2" class="glossary-toggle"><label for="g11_2" class="glossary-word">determination</label><span class="glossary-meaning">दृढ़ संकल्प</span></span>
+        .
+      </p>
+      <h3>Moral</h3>
+      <p>Where there is a will, there is a way.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story10" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 11 / 17</span>
+        <label for="story12" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 12 ================= -->
+    <div class="page page12">
+      <h1>The Golden Goose</h1>
+      <img src="images/goose.png" alt="Golden Goose">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText12')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText12">
+        Once upon a time, a farmer owned a magical goose that laid one golden egg every day. The farmer
+        became rich by selling the golden eggs in the market. However, he soon became
+        <span class="glossary"><input type="checkbox" id="g12_1" class="glossary-toggle"><label for="g12_1" class="glossary-word">greedy</label><span class="glossary-meaning">लालची</span></span>
+        and wanted to get all the golden eggs at once. Thinking the goose had many golden eggs inside its body, he
+        killed it. To his
+        <span class="glossary"><input type="checkbox" id="g12_2" class="glossary-toggle"><label for="g12_2" class="glossary-word">disappointment</label><span class="glossary-meaning">निराशा</span></span>
+        , he found nothing except an ordinary goose. The farmer lost
+        both the goose and the chance to receive more golden eggs in the future. He deeply
+        <span class="glossary"><input type="checkbox" id="g12_3" class="glossary-toggle"><label for="g12_3" class="glossary-word">regretted</label><span class="glossary-meaning">पछतावा हुआ</span></span>
+        his greed and realized that patience and
+        <span class="glossary"><input type="checkbox" id="g12_4" class="glossary-toggle"><label for="g12_4" class="glossary-word">contentment</label><span class="glossary-meaning">संतोष</span></span>
+        are more valuable than selfish desires.
+      </p>
+      <h3>Moral</h3>
+      <p>Greed can destroy everything.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story11" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 12 / 17</span>
+        <label for="story13" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 13 ================= -->
+    <div class="page page13">
+      <h1>The Bundle of Sticks</h1>
+      <img src="images/sticks.png" alt="Bundle of Sticks">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText13')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText13">
+        Once upon a time, an old farmer had four sons who always
+        <span class="glossary"><input type="checkbox" id="g13_1" class="glossary-toggle"><label for="g13_1" class="glossary-word">argued</label><span class="glossary-meaning">झगड़ा किया / बहस की</span></span>
+        with one another. He was
+        worried that their constant fighting would make them weak and unhappy. One day, he called them
+        together and handed each of them a bundle of sticks, asking them to break it. No matter how
+        hard they tried, none of them could break the bundle. Then the farmer untied the bundle and
+        gave each son a single stick. This time, they easily broke the sticks. The farmer smiled and
+        explained that when people stay
+        <span class="glossary"><input type="checkbox" id="g13_2" class="glossary-toggle"><label for="g13_2" class="glossary-word">united</label><span class="glossary-meaning">एकजुट</span></span>
+        , they become strong and can overcome any challenge. The
+        sons realized their mistake, promised to stop fighting, and decided to live together with love
+        and
+        <span class="glossary"><input type="checkbox" id="g13_3" class="glossary-toggle"><label for="g13_3" class="glossary-word">cooperation</label><span class="glossary-meaning">सहयोग</span></span>
+        .
+      </p>
+      <h3>Moral</h3>
+      <p>Unity is strength.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story12" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 13 / 17</span>
+        <label for="story14" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 14 ================= -->
+    <div class="page page14">
+      <h1>The Fox and the Grapes</h1>
+      <img src="images/grapes.png" alt="Fox and Grapes">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText14')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText14">
+        One warm afternoon, a hungry fox was walking through a vineyard when he noticed a bunch of
+        <span class="glossary"><input type="checkbox" id="g14_1" class="glossary-toggle"><label for="g14_1" class="glossary-word">ripe</label><span class="glossary-meaning">पका हुआ</span></span>
+        , juicy grapes hanging from a vine. The grapes looked delicious, and the fox wanted to eat
+        them. He jumped again and again but could not reach them because they were hanging too high.
+        After many unsuccessful attempts, he became tired and
+        <span class="glossary"><input type="checkbox" id="g14_2" class="glossary-toggle"><label for="g14_2" class="glossary-word">frustrated</label><span class="glossary-meaning">निराश / झुंझलाया हुआ</span></span>
+        . Instead of accepting his
+        failure, the fox walked away saying that those grapes were probably sour anyway. The other
+        animals smiled because they knew the fox was only making
+        <span class="glossary"><input type="checkbox" id="g14_3" class="glossary-toggle"><label for="g14_3" class="glossary-word">excuses</label><span class="glossary-meaning">बहाने</span></span>
+        . From that day on, everyone
+        remembered that it is easy to
+        <span class="glossary"><input type="checkbox" id="g14_4" class="glossary-toggle"><label for="g14_4" class="glossary-word">criticize</label><span class="glossary-meaning">आलोचना करना</span></span>
+        something we cannot achieve.
+      </p>
+      <h3>Moral</h3>
+      <p>It is easy to dislike what we cannot have.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story13" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 14 / 17</span>
+        <label for="story15" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 15 ================= -->
+    <div class="page page15">
+      <h1>The Milkmaid and Her Pot</h1>
+      <img src="images/milkmaid.png" alt="Milkmaid">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText15')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText15">
+        A young milkmaid was carrying a pot of fresh milk on her head as she walked toward the market.
+        Along the way, she started dreaming about selling the milk, buying chickens, earning more
+        money, and becoming very rich. She
+        <span class="glossary"><input type="checkbox" id="g15_1" class="glossary-toggle"><label for="g15_1" class="glossary-word">imagined</label><span class="glossary-meaning">कल्पना की</span></span>
+        building a beautiful house and living a comfortable
+        life. Lost in her dreams, she became so excited that she began to dance happily. Suddenly, the
+        pot slipped from her head, fell to the ground, and broke into pieces. All the milk was wasted,
+        and her dreams disappeared instantly. The milkmaid realized that success comes from hard work
+        and careful planning, not from
+        <span class="glossary"><input type="checkbox" id="g15_2" class="glossary-toggle"><label for="g15_2" class="glossary-word">daydreaming</label><span class="glossary-meaning">दिन में सपने देखना / हवाई किले बनाना</span></span>
+        alone.
+      </p>
+      <h3>Moral</h3>
+      <p>Don't count your chickens before they hatch.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story14" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 15 / 17</span>
+        <label for="story16" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 16 ================= -->
+    <div class="page page16">
+      <h1>The Boy Who Cried Wolf</h1>
+      <img src="images/wolf.png" alt="Boy Who Cried Wolf">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText16')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText16">
+        Once upon a time, a
+        <span class="glossary"><input type="checkbox" id="g16_1" class="glossary-toggle"><label for="g16_1" class="glossary-word">shepherd</label><span class="glossary-meaning">भेड़ चराने वाला / गड़रिया</span></span>
+        boy was responsible for looking after a flock of sheep near a
+        village. Feeling bored, he decided to play a trick on the villagers by shouting "Wolf! Wolf!"
+        The villagers rushed to help him, only to discover that he was laughing and there was no wolf
+        at all. The boy repeated the same trick several times, and the villagers became angry. One day,
+        a real wolf appeared and attacked the sheep. This time, the boy cried loudly for help, but no
+        one believed him because of his previous lies. The wolf escaped with several sheep, and the boy
+        learned an
+        <span class="glossary"><input type="checkbox" id="g16_2" class="glossary-toggle"><label for="g16_2" class="glossary-word">unforgettable</label><span class="glossary-meaning">कभी न भूलने वाला</span></span>
+        lesson about honesty and trust.
+      </p>
+      <h3>Moral</h3>
+      <p>Never tell lies because nobody believes a liar, even when they speak the truth.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story15" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 16 / 17</span>
+        <label for="story17" class="btn">Next ➜</label>
+      </div>
+    </div>
+
+    <!-- ================= STORY 17 ================= -->
+    <div class="page page17">
+      <h1>The Hare and the Tortoise</h1>
+      <img src="images/tortoise.png" alt="Hare and Tortoise">
+      <div class="voice-controls">
+        <button class="voice-btn" onclick="readStory('storyText17')">🔊 Listen</button>
+        <button class="voice-btn stop" onclick="stopStory()">⏹ Stop Listen</button>
+      </div>
+      <p id="storyText17">
+        Once upon a time, a fast hare was very
+        <span class="glossary"><input type="checkbox" id="g17_1" class="glossary-toggle"><label for="g17_1" class="glossary-word">proud</label><span class="glossary-meaning">घमंडी / गर्वित</span></span>
+        of his speed and often made fun of a slow
+        tortoise. Tired of being laughed at, the tortoise challenged the hare to a race.
+        <span class="glossary"><input type="checkbox" id="g17_2" class="glossary-toggle"><label for="g17_2" class="glossary-word">Confident</label><span class="glossary-meaning">आत्मविश्वासी</span></span>
+        that he would win easily, the hare ran far ahead and decided to take a nap under a tree. Meanwhile,
+        the tortoise continued walking slowly but
+        <span class="glossary"><input type="checkbox" id="g17_3" class="glossary-toggle"><label for="g17_3" class="glossary-word">steadily</label><span class="glossary-meaning">स्थिर गति से / लगातार</span></span>
+        without stopping. When the hare finally woke
+        up, he ran as fast as he could toward the finish line, but it was too late. The tortoise had
+        already crossed the finish line and won the race. Everyone praised the tortoise for his
+        patience, determination, and never-give-up attitude. The hare learned that
+        <span class="glossary"><input type="checkbox" id="g17_4" class="glossary-toggle"><label for="g17_4" class="glossary-word">overconfidence</label><span class="glossary-meaning">अत्यधिक आत्मविश्वास</span></span>
+        can lead to failure.
+      </p>
+      <h3>Moral</h3>
+      <p>Slow and steady wins the race.</p>
+      
+      <button class="print-btn" onclick="window.print()">🖨 Print This Story</button>
+
+      <div class="navigation">
+        <label for="story16" class="btn">⬅ Previous</label>
+        <span class="pageNo">📖 Page 17 / 17</span>
+        <label for="story1" class="btn">🏠 Home</label>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Right Sidebar (story-based info, changes with each story) -->
+  <div class="right">
+    <h2>📖 Story Information</h2>
+    <hr>
+
+    <div class="info info1">
+      <h3>📚 Category</h3><p>Courage & Hope</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>2–3 Minutes</p>
+      <div class="time-bar time-long"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Courage, Unity & Hope</p>
+      <h3>🎯 Moral Value</h3><p>Never lose hope in difficult situations.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info2">
+      <h3>📚 Category</h3><p>Honesty & Morals</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>2–3 Minutes</p>
+      <div class="time-bar time-long"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Honesty & Truthfulness</p>
+      <h3>🎯 Moral Value</h3><p>Honesty is the best policy.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info3">
+      <h3>📚 Category</h3><p>Friendship & Kindness</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>2 Minutes</p>
+      <div class="time-bar time-medium"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Kindness & Friendship</p>
+      <h3>🎯 Moral Value</h3><p>Kindness is never wasted.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info4">
+      <h3>📚 Category</h3><p>Wit & Intelligence</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>2–3 Minutes</p>
+      <div class="time-bar time-long"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Cleverness & Courage</p>
+      <h3>🎯 Moral Value</h3><p>Intelligence is more powerful than strength.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info5">
+      <h3>📚 Category</h3><p>Self-Control</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>2 Minutes</p>
+      <div class="time-bar time-medium"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Greed & Moderation</p>
+      <h3>🎯 Moral Value</h3><p>Greed always leads to problems.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info6">
+      <h3>📚 Category</h3><p>Wisdom & Patience</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>2–3 Minutes</p>
+      <div class="time-bar time-long"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Wisdom, Patience & Understanding</p>
+      <h3>🎯 Moral Value</h3><p>Listen more and speak less.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info7">
+      <h3>📚 Category</h3><p>Loyalty & Devotion</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>2–3 Minutes</p>
+      <div class="time-bar time-long"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Loyalty & Devotion</p>
+      <h3>🎯 Moral Value</h3><p>Loyalty is a true treasure.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info8">
+      <h3>📚 Category</h3><p>Kindness & Compassion</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>2–3 Minutes</p>
+      <div class="time-bar time-long"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Kindness & Helping Others</p>
+      <h3>🎯 Moral Value</h3><p>Kindness is always rewarded.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info9">
+      <h3>📚 Category</h3><p>Hard Work & Discipline</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>2 Minutes</p>
+      <div class="time-bar time-medium"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Diligence & Preparation</p>
+      <h3>🎯 Moral Value</h3><p>Hard work brings success.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info10">
+      <h3>📚 Category</h3><p>Bravery & Leadership</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>2–3 Minutes</p>
+      <div class="time-bar time-long"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Courage & Selflessness</p>
+      <h3>🎯 Moral Value</h3><p>True bravery means helping others even when you are afraid.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info11">
+      <h3>📚 Category</h3><p>Problem Solving</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>1–2 Minutes</p>
+      <div class="time-bar time-short"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Patience & Cleverness</p>
+      <h3>🎯 Moral Value</h3><p>Where there is a will, there is a way.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info12">
+      <h3>📚 Category</h3><p>Greed & Consequences</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>1–2 Minutes</p>
+      <div class="time-bar time-short"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Greed & Contentment</p>
+      <h3>🎯 Moral Value</h3><p>Greed can destroy everything.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info13">
+      <h3>📚 Category</h3><p>Unity & Cooperation</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>1–2 Minutes</p>
+      <div class="time-bar time-short"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Unity & Cooperation</p>
+      <h3>🎯 Moral Value</h3><p>Unity is strength.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info14">
+      <h3>📚 Category</h3><p>Self-Reflection</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>1–2 Minutes</p>
+      <div class="time-bar time-short"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Acceptance & Self-Honesty</p>
+      <h3>🎯 Moral Value</h3><p>It is easy to dislike what we cannot have.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info15">
+      <h3>📚 Category</h3><p>Realistic Planning</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>1–2 Minutes</p>
+      <div class="time-bar time-short"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Hard Work over Daydreaming</p>
+      <h3>🎯 Moral Value</h3><p>Don't count your chickens before they hatch.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info16">
+      <h3>📚 Category</h3><p>Honesty & Trust</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>1–2 Minutes</p>
+      <div class="time-bar time-short"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Truthfulness & Trust</p>
+      <h3>🎯 Moral Value</h3><p>Never tell lies — nobody believes a liar, even when they speak the truth.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+    <div class="info info17">
+      <h3>📚 Category</h3><p>Perseverance</p>
+      <h3>👥 Suitable For</h3><p>Kids, Students & Everyone</p>
+      <h3>⏱ Reading Time</h3><p>2 Minutes</p>
+      <div class="time-bar time-medium"><div class="time-fill"></div></div>
+      <h3>🌟 Difficulty Level</h3><p>Easy</p>
+      <h3>💡 Theme</h3><p>Consistency & Humility</p>
+      <h3>🎯 Moral Value</h3><p>Slow and steady wins the race.</p>
+      <h3>📖 Language</h3><p>Simple English</p>
+      <h3>⭐ Rating</h3><p>★★★★★ (5/5)</p>
+      <h3>📅 Published</h3><p>2026 Edition</p>
+      <h3>✍ Author</h3><p>Sneha</p>
+    </div>
+
+  </div>
+
+</div>
+
+<footer class="footer">
+  <h2>Story World</h2>
+  <p>Read • Learn • Enjoy</p>
+  <p>© 2026 Story World</p>
+</footer>
+
+<!--
+  VOICE READING (Option B) — Har story ka apna "Sunao" button hai jo us
+  page ke <p id="storyTextN"> wale text ko utha kar browser ki built-in
+  awaaz me bolta hai. Koi audio file, koi external AI, koi server nahi
+  lagta — sirf browser ka apna SpeechSynthesis feature.
+-->
+<script>
+  function readStory(paragraphId) {
+    const text = document.getElementById(paragraphId).innerText;
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';  // Hindi story ho to 'hi-IN' kar dena
+    utterance.rate = 0.95;     // thoda dheema, kids ke liye behtar
+    speechSynthesis.cancel();  // pehle se chal rahi speech pehle rok do
+    speechSynthesis.speak(utterance);
+  }
+  function stopStory() {
+    speechSynthesis.cancel();
+  }
+</script>
+
+</body>
+</html>

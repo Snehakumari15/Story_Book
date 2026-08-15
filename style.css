@@ -1,0 +1,1025 @@
+/* ===========================
+Reset
+=========================== */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #f5f5f5;
+}
+
+/* ===========================
+Hidden Radio Buttons
+=========================== */
+input {
+display: none;
+}
+
+/* ===========================
+Header
+=========================== */
+.header {
+background: linear-gradient(135deg, #6a1b9a, #9c27b0, #673ab7);
+color: white;
+text-align: center;
+padding: 25px 20px;
+box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.bookIcon {
+font-size: 55px;
+margin-bottom: 10px;
+}
+
+.header h1 {
+font-size: 45px;
+letter-spacing: 3px;
+margin-bottom: 10px;
+text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+font-size: 18px;
+opacity: 0.9;
+letter-spacing: 1px;
+}
+
+/* ===========================
+Main Container
+=========================== */
+.container {
+width: 95%;
+margin: 20px auto;
+display: flex;
+gap: 20px;
+}
+
+/* ===========================
+Left Sidebar
+=========================== */
+.left {
+width: 22%;
+background: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.left h2 {
+text-align: center;
+color: #6a1b9a;
+margin-bottom: 20px;
+}
+
+.menu {
+display: block;
+background: #3498db;
+color: white;
+padding: 12px;
+margin-bottom: 10px;
+border-radius: 8px;
+cursor: pointer;
+transition: 0.3s;
+font-size: 16px;
+}
+
+.menu:hover {
+background: #2980b9;
+}
+
+/* ===========================
+Center Book
+=========================== */
+.center {
+width: 53%;
+background: #fffdf5;
+padding: 25px;
+border: 2px solid #d2b48c;
+border-radius: 15px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+min-height: 650px;
+}
+
+.center h1 {
+text-align: center;
+color: #6a1b9a;
+margin-bottom: 20px;
+font-size: 35px;
+border-bottom: 2px solid #d4af37;
+padding-bottom: 10px;
+}
+
+.center p {
+font-size: 18px;
+line-height: 30px;
+text-align: justify;
+margin-top: 15px;
+}
+
+/* ===========================
+Story Image
+=========================== */
+.center img {
+width: 100%;
+height: 350px;
+object-fit: cover;
+border-radius: 10px;
+margin: 20px 0;
+}
+
+/* ===========================
+Right Sidebar
+=========================== */
+.right {
+width: 25%;
+background: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.right h2 {
+text-align: center;
+color: #6a1b9a;
+margin-bottom: 20px;
+}
+
+.right h3 {
+margin-top: 20px;
+color: #333;
+}
+
+.right p {
+margin-top: 8px;
+line-height: 25px;
+}
+
+/* ===========================
+Footer
+=========================== */
+.footer {
+background: #6a1b9a;
+color: white;
+text-align: center;
+padding: 25px;
+margin-top: 20px;
+}
+
+.footer h2 {
+margin-bottom: 10px;
+}
+
+.footer p {
+margin-top: 8px;
+}
+
+/* ===========================
+Responsive
+=========================== */
+@media (max-width: 992px) {
+.container {
+flex-direction: column;
+}
+
+.left,
+.center,
+.right {
+width: 100%;
+}
+}
+
+@media (max-width: 600px) {
+.header h1 {
+font-size: 28px;
+}
+
+.center img {
+height: 250px;
+}
+
+.center p {
+font-size: 16px;
+line-height: 28px;
+}
+
+.menu {
+text-align: center;
+}
+}
+
+/* ======================================
+STORY PAGES
+====================================== */
+.page {
+display: none;
+animation: fade 0.5s ease;
+}
+
+@keyframes fade {
+from {
+opacity: 0;
+transform: translateX(30px);
+}
+
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+
+/* ======================================
+SHOW SELECTED STORY
+====================================== */
+#story1:checked ~ .container .page1 {
+display: block;
+}
+
+#story2:checked ~ .container .page2 {
+display: block;
+}
+
+#story3:checked ~ .container .page3 {
+display: block;
+}
+
+#story4:checked ~ .container .page4 {
+display: block;
+}
+
+#story5:checked ~ .container .page5 {
+display: block;
+}
+
+#story6:checked ~ .container .page6 {
+display: block;
+}
+
+#story7:checked ~ .container .page7 {
+display: block;
+}
+
+#story8:checked ~ .container .page8 {
+display: block;
+}
+
+#story9:checked ~ .container .page9 {
+display: block;
+}
+
+#story10:checked ~ .container .page10 {
+display: block;
+}
+
+#story11:checked ~ .container .page11 {
+display: block;
+}
+
+#story12:checked ~ .container .page12 {
+display: block;
+}
+
+#story13:checked ~ .container .page13 {
+display: block;
+}
+
+#story14:checked ~ .container .page14 {
+display: block;
+}
+
+#story15:checked ~ .container .page15 {
+display: block;
+}
+
+#story16:checked ~ .container .page16 {
+display: block;
+}
+
+#story17:checked ~ .container .page17 {
+display: block;
+}
+
+/* ======================================
+STORY-BASED INFO PANEL (Right Sidebar)
+Same checkbox trick as story pages — sirf
+select ki gayi story ka info dikhega
+====================================== */
+.info {
+display: none;
+animation: fade 0.5s ease;
+}
+
+#story1:checked ~ .container .right .info1,
+#story2:checked ~ .container .right .info2,
+#story3:checked ~ .container .right .info3,
+#story4:checked ~ .container .right .info4,
+#story5:checked ~ .container .right .info5,
+#story6:checked ~ .container .right .info6,
+#story7:checked ~ .container .right .info7,
+#story8:checked ~ .container .right .info8,
+#story9:checked ~ .container .right .info9,
+#story10:checked ~ .container .right .info10,
+#story11:checked ~ .container .right .info11,
+#story12:checked ~ .container .right .info12,
+#story13:checked ~ .container .right .info13,
+#story14:checked ~ .container .right .info14,
+#story15:checked ~ .container .right .info15,
+#story16:checked ~ .container .right .info16,
+#story17:checked ~ .container .right .info17 {
+display: block;
+}
+
+/* ======================================
+STORY IMAGE
+====================================== */
+.page img {
+width: 100%;
+height: 350px;
+object-fit: cover;
+border-radius: 12px;
+margin: 20px 0;
+border: 3px solid white;
+box-shadow: 0 5px 15px gray;
+}
+
+/* ======================================
+MORAL
+====================================== */
+.page h3 {
+color: #6a1b9a;
+margin-top: 20px;
+}
+
+.page p {
+line-height: 30px;
+font-size: 18px;
+text-align: justify;
+}
+
+/* ======================================
+WORD MEANING ON CLICK (Glossary)
+Pure HTML + CSS — checkbox + label + hidden span trick
+(same idea as your story radio-buttons, applied to words)
+====================================== */
+.glossary {
+position: relative;
+display: inline-block;
+}
+
+.glossary-toggle {
+display: none;
+}
+
+.glossary-word {
+color: #6a1b9a;
+font-weight: bold;
+text-decoration: underline dotted;
+text-decoration-color: #9c27b0;
+cursor: pointer;
+}
+
+.glossary-word:hover {
+color: #9c27b0;
+}
+
+.glossary-meaning {
+display: none;
+position: absolute;
+bottom: 130%;
+left: 50%;
+transform: translateX(-50%);
+background: #4a148c;
+color: #fff;
+padding: 10px 14px;
+border-radius: 10px;
+font-size: 14px;
+line-height: 20px;
+width: max-content;
+max-width: 220px;
+text-align: center;
+z-index: 30;
+box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.glossary-meaning::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+transform: translateX(-50%);
+border-width: 6px;
+border-style: solid;
+border-color: #4a148c transparent transparent transparent;
+}
+
+.glossary-toggle:checked ~ .glossary-meaning {
+display: block;
+}
+
+/* ======================================
+VOICE READING BUTTONS (Sunao / Roko)
+====================================== */
+.voice-controls {
+display: flex;
+gap: 12px;
+margin: 15px 0 20px 0;
+}
+
+.voice-btn {
+background: #6a1b9a;
+color: white;
+padding: 10px 22px;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+font-weight: bold;
+font-size: 15px;
+transition: 0.3s;
+}
+
+.voice-btn:hover {
+background: #4a148c;
+transform: scale(1.05);
+}
+
+.voice-btn.stop {
+background: #b71c1c;
+}
+
+.voice-btn.stop:hover {
+background: #8e0000;
+}
+
+/* ======================================
+PREVIOUS / NEXT BUTTONS
+====================================== */
+.navigation {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 30px;
+}
+
+.pageNo {
+font-size: 18px;
+font-weight: bold;
+color: #6a1b9a;
+align-items: center;
+}
+
+.btn {
+background: #6a1b9a;
+color: white;
+padding: 12px 25px;
+border-radius: 30px;
+cursor: pointer;
+transition: 0.3s;
+font-weight: bold;
+}
+
+.btn:hover {
+background: #4a148c;
+transform: scale(1.08);
+}
+
+/* ======================================
+ACTIVE MENU HIGHLIGHT
+====================================== */
+#story1:checked ~ .container .left label[for="story1"],
+#story2:checked ~ .container .left label[for="story2"],
+#story3:checked ~ .container .left label[for="story3"],
+#story4:checked ~ .container .left label[for="story4"],
+#story5:checked ~ .container .left label[for="story5"],
+#story6:checked ~ .container .left label[for="story6"],
+#story7:checked ~ .container .left label[for="story7"],
+#story8:checked ~ .container .left label[for="story8"],
+#story9:checked ~ .container .left label[for="story9"],
+#story10:checked ~ .container .left label[for="story10"],
+#story11:checked ~ .container .left label[for="story11"],
+#story12:checked ~ .container .left label[for="story12"],
+#story13:checked ~ .container .left label[for="story13"],
+#story14:checked ~ .container .left label[for="story14"],
+#story15:checked ~ .container .left label[for="story15"],
+#story16:checked ~ .container .left label[for="story16"],
+#story17:checked ~ .container .left label[for="story17"] {
+background: #6a1b9a;
+color: white;
+}
+
+/* ======================================
+MOBILE
+====================================== */
+@media (max-width: 768px) {
+.navigation {
+flex-direction: column;
+gap: 15px;
+}
+
+.btn {
+text-align: center;
+}
+
+.page img {
+height: 250px;
+}
+
+.voice-controls {
+justify-content: center;
+}
+}
+
+/* ======================================
+CONTROLS BAR (Dark mode + Font size) — inside header
+====================================== */
+.controls-bar {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 25px;
+margin-top: 15px;
+flex-wrap: wrap;
+}
+
+.toggle-switch {
+background: rgba(255, 255, 255, 0.2);
+color: white;
+padding: 8px 18px;
+border-radius: 30px;
+cursor: pointer;
+font-weight: bold;
+font-size: 14px;
+border: 1px solid rgba(255, 255, 255, 0.4);
+transition: 0.3s;
+}
+
+.toggle-switch:hover {
+background: rgba(255, 255, 255, 0.35);
+}
+
+.font-size-controls {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.font-label {
+color: white;
+font-size: 14px;
+font-weight: bold;
+}
+
+.font-btn {
+background: rgba(255, 255, 255, 0.2);
+color: white;
+padding: 6px 14px;
+border-radius: 20px;
+cursor: pointer;
+font-weight: bold;
+border: 1px solid rgba(255, 255, 255, 0.4);
+transition: 0.3s;
+}
+
+.font-btn:hover {
+background: rgba(255, 255, 255, 0.35);
+}
+
+/* Active font button highlight */
+body:has(#fontSmall:checked) label[for="fontSmall"],
+body:has(#fontMedium:checked) label[for="fontMedium"],
+body:has(#fontLarge:checked) label[for="fontLarge"] {
+background: #ffffff;
+color: #6a1b9a;
+}
+
+/* ======================================
+FONT SIZE CONTROL — applies to story text
+====================================== */
+body:has(#fontSmall:checked) .page p,
+body:has(#fontSmall:checked) .glossary-word,
+body:has(#fontSmall:checked) .glossary-meaning {
+font-size: 15px;
+line-height: 26px;
+}
+
+body:has(#fontLarge:checked) .page p,
+body:has(#fontLarge:checked) .glossary-word,
+body:has(#fontLarge:checked) .glossary-meaning {
+font-size: 23px;
+line-height: 36px;
+}
+
+/* ======================================
+CATEGORY FILTER TABS — Left sidebar
+====================================== */
+.category-tabs {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-bottom: 20px;
+}
+
+.cat-tab {
+background: #ede7f6;
+color: #6a1b9a;
+padding: 6px 14px;
+border-radius: 20px;
+font-size: 13px;
+cursor: pointer;
+font-weight: bold;
+transition: 0.3s;
+border: 1px solid #d1c4e9;
+}
+
+.cat-tab:hover {
+background: #d1c4e9;
+}
+
+body:has(#catAll:checked) label[for="catAll"],
+body:has(#catCourage:checked) label[for="catCourage"],
+body:has(#catHonesty:checked) label[for="catHonesty"],
+body:has(#catKindness:checked) label[for="catKindness"],
+body:has(#catCleverness:checked) label[for="catCleverness"],
+body:has(#catGreed:checked) label[for="catGreed"],
+body:has(#catWisdom:checked) label[for="catWisdom"],
+body:has(#catLoyalty:checked) label[for="catLoyalty"],
+body:has(#catHardwork:checked) label[for="catHardwork"],
+body:has(#catUnity:checked) label[for="catUnity"],
+body:has(#catSelfreflection:checked) label[for="catSelfreflection"],
+body:has(#catPerseverance:checked) label[for="catPerseverance"] {
+background: #6a1b9a;
+color: white;
+border-color: #6a1b9a;
+}
+
+/* Hide non-matching stories when a category is selected */
+body:has(#catCourage:checked) .left .story-row:not(:has(.cat-courage)) { display: none; }
+body:has(#catHonesty:checked) .left .story-row:not(:has(.cat-honesty)) { display: none; }
+body:has(#catKindness:checked) .left .story-row:not(:has(.cat-kindness)) { display: none; }
+body:has(#catCleverness:checked) .left .story-row:not(:has(.cat-cleverness)) { display: none; }
+body:has(#catGreed:checked) .left .story-row:not(:has(.cat-greed)) { display: none; }
+body:has(#catWisdom:checked) .left .story-row:not(:has(.cat-wisdom)) { display: none; }
+body:has(#catLoyalty:checked) .left .story-row:not(:has(.cat-loyalty)) { display: none; }
+body:has(#catHardwork:checked) .left .story-row:not(:has(.cat-hardwork)) { display: none; }
+body:has(#catUnity:checked) .left .story-row:not(:has(.cat-unity)) { display: none; }
+body:has(#catSelfreflection:checked) .left .story-row:not(:has(.cat-selfreflection)) { display: none; }
+body:has(#catPerseverance:checked) .left .story-row:not(:has(.cat-perseverance)) { display: none; }
+
+/* ======================================
+DARK MODE — pure CSS using :has()
+====================================== */
+body:has(#darkMode:checked) {
+background: #121016;
+}
+
+body:has(#darkMode:checked) .header {
+background: linear-gradient(135deg, #2a1a40, #3d1f5c, #241640);
+}
+
+body:has(#darkMode:checked) .left,
+body:has(#darkMode:checked) .center,
+body:has(#darkMode:checked) .right {
+background: #1e1a29;
+border-color: #4a2f70;
+color: #eae6f2;
+}
+
+body:has(#darkMode:checked) .center h1,
+body:has(#darkMode:checked) .right h2,
+body:has(#darkMode:checked) .left h2,
+body:has(#darkMode:checked) .page h3,
+body:has(#darkMode:checked) .right h3 {
+color: #d1a3ff;
+border-color: #4a2f70;
+}
+
+body:has(#darkMode:checked) .center p,
+body:has(#darkMode:checked) .right p,
+body:has(#darkMode:checked) .page p {
+color: #e0dbee;
+}
+
+body:has(#darkMode:checked) .menu {
+background: #33254d;
+color: #e0dbee;
+}
+
+body:has(#darkMode:checked) .menu:hover {
+background: #4a2f70;
+}
+
+body:has(#darkMode:checked) .cat-tab {
+background: #2a2038;
+color: #d1a3ff;
+border-color: #4a2f70;
+}
+
+body:has(#darkMode:checked) .cat-tab:hover {
+background: #4a2f70;
+}
+
+body:has(#darkMode:checked) .btn,
+body:has(#darkMode:checked) .voice-btn,
+body:has(#darkMode:checked) .pageNo {
+background: #6a1b9a;
+}
+
+body:has(#darkMode:checked) .footer {
+background: #241640;
+}
+
+body:has(#darkMode:checked) .glossary-meaning {
+background: #7c3aed;
+}
+
+body:has(#darkMode:checked) .glossary-meaning::after {
+border-color: #7c3aed transparent transparent transparent;
+}
+
+body:has(#darkMode:checked) label[for="darkMode"] {
+background: #7c3aed;
+color: white;
+}
+
+/* NOTE: Dark mode, font size aur category filter — teeno
+   modern CSS ":has()" selector use karte hain (koi JavaScript
+   nahi). Ye Chrome, Edge, Safari aur naye Firefox (v121+) me
+   pura kaam karta hai. Bahut purane browsers me shayad na chale. */
+
+/* ======================================
+4) FAVORITE BOOKMARK STAR
+====================================== */
+.story-row {
+position: relative;
+display: flex;
+align-items: center;
+gap: 6px;
+margin-bottom: 10px;
+}
+
+.fav-toggle {
+display: none;
+}
+
+.star {
+font-size: 0; /* hide default label text, use ::before instead */
+cursor: pointer;
+line-height: 1;
+flex-shrink: 0;
+}
+
+.star::before {
+content: "☆";
+font-size: 20px;
+color: #b39ddb;
+}
+
+.fav-toggle:checked + .star::before {
+content: "★";
+color: #ffca28;
+}
+
+.story-row .menu {
+flex: 1;
+margin-bottom: 0;
+}
+
+/* Show only favorited stories when "My Favorites" is switched on */
+body:has(#showFavOnly:checked) .story-row:not(:has(.fav-toggle:checked)) {
+display: none;
+}
+
+/* ======================================
+5) READING TIME BADGE — VISUAL BAR
+====================================== */
+.time-bar {
+width: 100%;
+height: 8px;
+background: #ede7f6;
+border-radius: 10px;
+overflow: hidden;
+margin-top: 4px;
+}
+
+.time-fill {
+height: 100%;
+background: linear-gradient(90deg, #9c27b0, #6a1b9a);
+border-radius: 10px;
+}
+
+.time-short .time-fill { width: 35%; }
+.time-medium .time-fill { width: 60%; }
+.time-long .time-fill { width: 85%; }
+
+body:has(#darkMode:checked) .time-bar {
+background: #33254d;
+}
+
+/* ======================================
+6) HOVER PREVIEW CARD
+====================================== */
+.preview-card {
+display: none;
+position: absolute;
+top: 0;
+left: 102%;
+width: 220px;
+background: #4a148c;
+color: #fff;
+padding: 12px 14px;
+border-radius: 10px;
+font-size: 13px;
+line-height: 19px;
+z-index: 50;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.story-row .menu:hover ~ .preview-card {
+display: block;
+}
+
+/* Keep preview cards on-screen for the left-most column on small screens */
+@media (max-width: 992px) {
+.preview-card {
+left: 0;
+top: 105%;
+width: 100%;
+}
+}
+
+/* ======================================
+7) FLIP-BOOK PAGE-TURN ANIMATION
+====================================== */
+.center {
+perspective: 1800px;
+}
+
+.page {
+animation-name: pageFlip;
+animation-duration: 0.7s;
+animation-timing-function: ease;
+transform-style: preserve-3d;
+transform-origin: left center;
+}
+
+@keyframes pageFlip {
+0% {
+opacity: 0;
+transform: rotateY(-100deg);
+}
+60% {
+opacity: 1;
+}
+100% {
+opacity: 1;
+transform: rotateY(0deg);
+}
+}
+
+/* ======================================
+PAGE-DOTS PAGINATION
+====================================== */
+.page-dots {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 8px;
+padding: 12px 10px;
+background: #f0e9fa;
+}
+
+.dot {
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background: #d1c4e9;
+cursor: pointer;
+transition: 0.3s;
+display: inline-block;
+}
+
+.dot:hover {
+background: #9c27b0;
+transform: scale(1.3);
+}
+
+#story1:checked ~ .page-dots label[for="story1"],
+#story2:checked ~ .page-dots label[for="story2"],
+#story3:checked ~ .page-dots label[for="story3"],
+#story4:checked ~ .page-dots label[for="story4"],
+#story5:checked ~ .page-dots label[for="story5"],
+#story6:checked ~ .page-dots label[for="story6"],
+#story7:checked ~ .page-dots label[for="story7"],
+#story8:checked ~ .page-dots label[for="story8"],
+#story9:checked ~ .page-dots label[for="story9"],
+#story10:checked ~ .page-dots label[for="story10"],
+#story11:checked ~ .page-dots label[for="story11"],
+#story12:checked ~ .page-dots label[for="story12"],
+#story13:checked ~ .page-dots label[for="story13"],
+#story14:checked ~ .page-dots label[for="story14"],
+#story15:checked ~ .page-dots label[for="story15"],
+#story16:checked ~ .page-dots label[for="story16"],
+#story17:checked ~ .page-dots label[for="story17"] {
+background: #6a1b9a;
+width: 26px;
+border-radius: 8px;
+}
+
+body:has(#darkMode:checked) .page-dots {
+background: #1e1a29;
+}
+
+body:has(#darkMode:checked) .dot {
+background: #4a2f70;
+}
+
+@media print {
+.page-dots {
+display: none !important;
+}
+}
+
+/* ======================================
+DROP CAP — first letter of each story
+====================================== */
+.page p[id^="storyText"]::first-letter {
+font-size: 48px;
+font-weight: bold;
+float: left;
+line-height: 38px;
+padding: 4px 10px 0 0;
+color: #6a1b9a;
+font-family: Georgia, 'Times New Roman', serif;
+}
+
+body:has(#darkMode:checked) .page p[id^="storyText"]::first-letter {
+color: #d1a3ff;
+}
+.print-btn {
+background: #37474f;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+font-weight: bold;
+font-size: 15px;
+margin-top: 15px;
+transition: 0.3s;
+}
+
+.print-btn:hover {
+background: #263238;
+transform: scale(1.05);
+}
+
+body:has(#darkMode:checked) .print-btn {
+background: #4a2f70;
+}
+
+/* ======================================
+8) PRINT-FRIENDLY STORY VIEW
+====================================== */
+@media print {
+.header .controls-bar,
+.left,
+.right,
+.footer,
+.navigation,
+.voice-controls,
+.category-tabs,
+.print-btn,
+input[type="radio"],
+input[type="checkbox"] {
+display: none !important;
+}
+
+.container {
+display: block;
+width: 100%;
+}
+
+.center {
+width: 100%;
+box-shadow: none;
+border: none;
+padding: 0;
+perspective: none;
+}
+
+.page {
+animation: none !important;
+transform: none !important;
+}
+
+body {
+background: white;
+color: black;
+}
+
+.glossary-meaning {
+display: none !important;
+}
+}
